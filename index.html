@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anime Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__row">
+      <h1 class="logo">Anime Catalog</h1>
+
+      <input id="searchInput" class="input" type="search" placeholder="Поиск по названию..." />
+
+      <select id="genreSelect" class="select">
+        <option value="all">Все жанры</option>
+      </select>
+
+      <label class="toggle">
+        <input id="favOnly" type="checkbox" />
+        <span>Только избранное</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="grid" class="grid"></section>
+    <p id="empty" class="empty hidden">Ничего не найдено 😿</p>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal__backdrop" data-close="1"></div>
+
+    <div class="modal__card" role="dialog" aria-modal="true">
+      <button id="modalClose" class="iconbtn" aria-label="Закрыть">✕</button>
+      <div id="modalBody" class="modal__body"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
